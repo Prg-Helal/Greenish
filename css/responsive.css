@@ -1,0 +1,119 @@
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .product-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-image img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header .container {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas: 
+            "logo logo mobile"
+            "search search search"
+            "nav nav nav";
+        gap: 1rem;
+    }
+    
+    .logo {
+        grid-area: logo;
+    }
+    
+    .search-bar {
+        grid-area: search;
+    }
+    
+    .mobile-menu-btn {
+        grid-area: mobile;
+        display: flex;
+        align-self: center;
+        justify-self: end;
+    }
+    
+    .main-nav {
+        grid-area: nav;
+        display: none;
+    }
+    
+    .main-nav.active {
+        display: block;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .main-nav li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .cart-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .cart-summary {
+        position: static;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .product-actions {
+        flex-direction: column;
+    }
+    
+    .quantity-selector {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding: 3rem 0;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .product-card img,
+    .category-card {
+        height: 150px;
+    }
+    
+    .cart-item {
+        grid-template-columns: 1fr;
+    }
+    
+    .cart-item img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .tabs-header {
+        flex-direction: column;
+    }
+    
+    .tab-btn {
+        border-bottom: none;
+        border-left: 3px solid transparent;
+        text-align: left;
+    }
+    
+    .tab-btn.active {
+        border-bottom: none;
+        border-left-color: var(--primary-color);
+    }
+}

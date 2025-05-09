@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product - Greenish</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Greenish</h1>
+                <p>Sustainable Living</p>
+            </div>
+
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search eco-friendly products..."
+                        autocomplete="off">
+                    <button class="search-btn">Search</button>
+                </div>
+                <div class="search-suggestions" id="search-suggestions"></div>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li> <!-- أضف class="nav-link" هنا -->
+                    <li><a href="signup.html" class="nav-link">Sign Up</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <li><a href="categories.html" class="nav-link">Categories</a></li>
+                    <li><a href="cart.html" class="cart-link nav-link">Cart (<span id="cart-count">0</span>)</a></li>
+                    <li id="logout"></li>    
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="product-section fade-in">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a> &gt; 
+                    <a href="categories.html">Categories</a> &gt; 
+                    <a href="#">Reusable Bottles</a> &gt; 
+                    <span>Eco Water Bottle</span>
+                </div>
+                
+                <div class="product-details">
+                    <div class="product-images">
+                        <div class="main-image">
+                            <img src="images/products/bottle.jpg" alt="Eco Water Bottle" id="main-product-image">
+                        </div>
+                        <div class="thumbnail-images">
+                            <!-- <img src="images/products/bottle.jpg" alt="Thumbnail 1" class="thumbnail active">
+                            <img src="images/products/bag.jpg" alt="Thumbnail 2" class="thumbnail">
+                            <img src="images/products/skincare.jpg" alt="Thumbnail 3" class="thumbnail"> -->
+                        </div>
+                    </div>
+                    
+                    <div class="product-info">
+                        <h1>Eco Water Bottle</h1>
+                        <div class="product-meta">
+                            <span class="price">$24.99</span>
+                            <span class="rating">★★★★☆ (42 reviews)</span>
+                            <span class="availability">In Stock</span>
+                        </div>
+                        
+                        <div class="product-description">
+                            <p>Our premium reusable water bottle is made from 100% recycled stainless steel, keeping your drinks cold for 24 hours or hot for 12 hours. Perfect for your daily hydration needs while reducing plastic waste.</p>
+                            <ul>
+                                <li>BPA-free and toxin-free</li>
+                                <li>Leak-proof design</li>
+                                <li>Easy to clean</li>
+                                <li>500ml capacity</li>
+                                <li>Comes with a bamboo lid</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <div class="quantity-selector">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="number" value="1" min="1" id="product-quantity">
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="btn btn-primary add-to-cart" data-id="1">Add to Cart</button>
+                        </div>
+                        
+                        <div class="product-tabs">
+                            <div class="tabs-header">
+                                <button class="tab-btn active" data-tab="details">Details</button>
+                                <button class="tab-btn" data-tab="reviews">Reviews</button>
+                                <button class="tab-btn" data-tab="shipping">Shipping</button>
+                            </div>
+                            <div class="tabs-content">
+                                <div class="tab-panel active" id="details-tab">
+                                    <p>This eco-friendly water bottle is designed with sustainability in mind. The stainless steel is 100% recyclable, and the bamboo lid is sourced from responsibly managed forests. Each purchase helps fund clean water initiatives in developing countries.</p>
+                                </div>
+                                <div class="tab-panel" id="reviews-tab">
+                                    <div class="review">
+                                        <h4>Great bottle!</h4>
+                                        <div class="review-meta">★★★★☆ by Sarah on 10/15/2023</div>
+                                        <p>Love this bottle! Keeps my water cold all day. The only reason I didn't give 5 stars is because the lid took some getting used to.</p>
+                                    </div>
+                                    <div class="review">
+                                        <h4>Perfect for my needs</h4>
+                                        <div class="review-meta">★★★★★ by Michael on 09/28/2023</div>
+                                        <p>Exactly what I was looking for. Lightweight, durable, and eco-friendly. Highly recommend!</p>
+                                    </div>
+                                </div>
+                                <div class="tab-panel" id="shipping-tab">
+                                    <p>We ship all products in 100% recycled packaging. Standard shipping takes 3-5 business days. Express shipping available at checkout.</p>
+                                    <p>Free shipping on orders over $50.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <section class="related-products">
+                    <h2 class="section-title">You Might Also Like</h2>
+                    <div class="products-grid">
+                        <div class="product-card slide-up">
+                            <img src="images/categories/Bottles-category.jpg" alt="Eco Bag">
+                            <h3>Sustainable Tote Bag</h3>
+                            <p>$19.99</p>
+                            <button class="btn btn-secondary add-to-cart" data-id="2">Add to Cart</button>
+                        </div>
+                        <div class="product-card slide-up" style="animation-delay: 0.2s;">
+                            <img src="images/categories/bags-category.jpg" alt="Eco Skincare">
+                            <h3>Organic Skincare Set</h3>
+                            <p>$34.99</p>
+                            <button class="btn btn-secondary add-to-cart" data-id="3">Add to Cart</button>
+                        </div>
+                        <div class="product-card slide-up" style="animation-delay: 0.4s;">
+                            <img src="images/categories/skincare-category.jpg" alt="Eco Bottle">
+                            <h3>Reusable Coffee Cup</h3>
+                            <p>$22.99</p>
+                            <button class="btn btn-secondary add-to-cart" data-id="4">Add to Cart</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section">
+                <h3>Greenish</h3>
+                <p>Sustainable products for a better future.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="categories.html">Shop</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Your email">
+                    <button type="submit" class="btn btn-secondary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Greenish. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/product.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

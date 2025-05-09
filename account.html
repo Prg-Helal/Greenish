@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - Greenish</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon"  href="images/download.jpg">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Greenish</h1>
+                <p>Sustainable Living</p>
+            </div>
+
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search eco-friendly products..."
+                        autocomplete="off">
+                    <button class="search-btn">Search</button>
+                </div>
+                <div class="search-suggestions" id="search-suggestions"></div>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li> <!-- أضف class="nav-link" هنا -->
+                    <li><a href="signup.html" class="nav-link">Sign Up</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <li><a href="categories.html" class="nav-link">Categories</a></li>
+                    <li><a href="cart.html" class="cart-link nav-link">Cart (<span id="cart-count">0</span>)</a></li>
+                    <li id="logout"></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <main class="main-content">
+        <section class="account-section">
+            <div class="container">
+                <h2 class="section-title">My Account</h2>
+                
+                <div class="account-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="profile">Profile</button>
+                        <button class="tab-btn" data-tab="orders">My Orders</button>
+                        <button class="tab-btn" data-tab="address">Address</button>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <div id="profile-tab" class="tab-panel active">
+                            <h3>Personal Information</h3>
+                            <div id="profile-info">
+                                <!-- Dynamically filled with JavaScript -->
+                            </div>
+                            <button id="edit-profile" class="btn btn-secondary">Edit Profile</button>
+                        </div>
+                        
+                        <div id="orders-tab" class="tab-panel">
+                            <h3>Order History</h3>
+                            <div id="orders-list">
+                                <!-- Dynamically filled with JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <div id="address-tab" class="tab-panel">
+                            <h3>Shipping Address</h3>
+                            <div id="address-info">
+                                <!-- Dynamically filled with JavaScript -->
+                            </div>
+                            <button id="edit-address" class="btn btn-secondary">Edit Address</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="copyright">
+                <p>&copy; 2023 Greenish. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/account.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

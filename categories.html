@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Categories - Greenish</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Greenish</h1>
+                <p>Sustainable Living</p>
+            </div>
+
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search eco-friendly products..."
+                        autocomplete="off">
+                    <button class="search-btn">Search</button>
+                </div>
+                <div class="search-suggestions" id="search-suggestions"></div>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li> <!-- أضف class="nav-link" هنا -->
+                    <li><a href="signup.html" class="nav-link">Sign Up</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <li><a href="categories.html" class="nav-link">Categories</a></li>
+                    <li><a href="cart.html" class="cart-link nav-link">Cart (<span id="cart-count">0</span>)</a></li>
+                    <li id="logout"></li>
+
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="categories-section fade-in">
+            <div class="container">
+                <h2 class="section-title">Our Product Categories</h2>
+                <p class="section-subtitle">Browse our selection of sustainable products</p>
+                
+                <div class="categories-grid">
+    <div class="category-card slide-up">
+        <img src="images/categories/bottles-category.jpg" alt="Reusable Bottles">
+        <div class="category-info">
+            <h3>Reusable Bottles</h3>
+            <p>Ditch single-use plastics with our stylish, durable bottles</p>
+            <a href="products.html?category=bottles" class="btn btn-outline">View Products</a>
+        </div>
+    </div>
+    
+    <div class="category-card slide-up" style="animation-delay: 0.2s;">
+        <img src="images/categories/bags-category.jpg" alt="Eco Bags">
+        <div class="category-info">
+            <h3>Eco Bags</h3>
+            <p>Sustainable alternatives to plastic bags</p>
+            <a href="products.html?category=bags" class="btn btn-outline">View Products</a>
+        </div>
+    </div>
+    
+    <div class="category-card slide-up" style="animation-delay: 0.4s;">
+        <img src="images/categories/skincare-category.jpg" alt="Natural Skincare">
+        <div class="category-info">
+            <h3>Natural Skincare</h3>
+            <p>Chemical-free products for your skin</p>
+            <a href="products.html?category=skincare" class="btn btn-outline">View Products</a>
+        </div>
+    </div>
+</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section">
+                <h3>Greenish</h3>
+                <p>Sustainable products for a better future.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="categories.html">Shop</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Your email">
+                    <button type="submit" class="btn btn-secondary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Greenish. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>
