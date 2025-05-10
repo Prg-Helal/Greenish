@@ -72,6 +72,7 @@ function checkLoginStatus() {
     const loggedInUser = localStorage.getItem('loggedInUser');
     const accountLink = document.getElementById('account-link');
     const linksContainer = document.getElementById('logout');
+    const cartLink = document.getElementById('cart-link');
     
     if (loggedInUser && accountLink) {
         const user = JSON.parse(loggedInUser);
@@ -92,6 +93,7 @@ function checkLoginStatus() {
         });
         
         // accountLink.parentNode.insertBefore(logoutBtn, accountLink.nextSibling);
+        cartLink.append(accountLink)
         linksContainer.appendChild(logoutBtn)
         // تحديث الروابط بعد تسجيل الدخول
         updateNavLinks();
